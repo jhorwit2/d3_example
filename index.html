@@ -1,0 +1,38 @@
+
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    <script>
+    var svgContainer = d3.select("body")
+        .append("svg")
+        .attr("width", 2000)
+        .attr("height", 2000);
+
+    svgContainer.append("svg:image")
+        .attr('x', 0)
+        .attr('y', -100)
+        .attr('width', 800)
+        .attr('height', 800)
+        .attr("xlink:href","image.gif");
+
+        //Draw the line
+    svgContainer.append("line")
+        .attr("x1", 100)
+        .attr("y1", 400)
+        .attr("x2", 700)
+        .attr("y2", 400)
+        .attr("stroke-width", 2)
+        .attr("stroke", "black");
+
+    svgContainer.append("line")
+        .attr("x1", 400)
+        .attr("y1", 100)
+        .attr("x2", 400)
+        .attr("y2", 600)
+        .attr("stroke-width", 2)
+        .attr("stroke", "red");
+    </script>
+</body>
+</html>
